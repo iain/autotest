@@ -370,6 +370,7 @@ class Autotest
         next if test ?d, f
         next if f =~ /(swp|~|rej|orig)$/ # temporary/patch files
         next if f =~ /\/\.?#/            # Emacs autosave/cvs merge files
+        next if f =~ /\/\./              # hidden files
 
         filename = f.sub(/^\.\//, '')
 
